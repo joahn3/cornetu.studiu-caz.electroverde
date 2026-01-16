@@ -6,12 +6,16 @@
   
   <title>Studiu de Caz: Sistem Fotovoltaic Business Cornetu | electroVerde</title>
   <meta name="description" content="Vezi cum Grup Fort Studio și-a asigurat independența energetică: 15.6 kWp, panouri AIKO full-black și backup cu timp de transfer 4ms. Proiect executat de electroVerde." />
-  <link rel="canonical" href="https://electroverde.ro/studiu-caz-cornetu/" />
+  
+  <link rel="canonical" href="https://studiu-caz-cornetu.netlify.app/" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Proiect Business: Cornetu, Ilfov – Grup Fort Studio" />
-  <meta property="og:description" content="Sistem 15.6 kWp cu backup UPS (4ms) și panouri AIKO Full-Black." />
-  <meta property="og:url" content="https://electroverde.ro/studiu-caz-cornetu/" />
+  <meta property="og:description" content="Sistem 15.6 kWp cu backup rapid (~4ms) și panouri AIKO Full-Black." />
+  <meta property="og:url" content="https://studiu-caz-cornetu.netlify.app/" />
+  <meta property="og:image" content="https://electroverde.ro/wp-content/uploads/2025/11/cover-social-share-placeholder.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <style>
     /* ===========================
@@ -308,7 +312,7 @@
     <section class="hero">
       <div class="eyebrow">Studiu de Caz • Business</div>
       <h1>Independență Energetică la <br>Grup Fort Studio</h1>
-      <p>Sistem fotovoltaic 15.6 kWp cu capacitate UPS (~4ms) și estetică full-black, integrat perfect în arhitectura clădirii din Cornetu, Ilfov.</p>
+      <p>Sistem fotovoltaic 15.6 kWp cu capacitate backup (~4 ms) și estetică full-black, integrat perfect în arhitectura clădirii din Cornetu, Ilfov.</p>
       
       <div class="chips">
         <span class="chip">📍 Cornetu, Ilfov</span>
@@ -347,7 +351,7 @@
         <p>Am proiectat o "fortăreață energetică" bazată pe tehnologia <strong>AIKO ABC (All Back Contact)</strong>. Panourile alese sunt "Full Black", oferind un aspect unitar, premium, care completează designul modern al studioului.</p>
         
         <div class="highlight-box">
-          <strong>🔒 Securitate UPS:</strong> Sistemul hibrid asigură backup cu timp de transfer ~4 ms pentru continuitatea echipamentelor IT (servere/randare), comutând instantaneu pe baterii în cazul unei avarii în rețea.
+          <strong>🔒 Backup rapid:</strong> Sistemul hibrid asigură un timp de transfer ~4 ms pentru continuitatea echipamentelor IT (servere/randare), comutând instantaneu pe baterii în cazul unei avarii în rețea.
         </div>
 
         <h3>De ce monitorizare PRO-GUARD?</h3>
@@ -398,7 +402,18 @@
         </div>
 
         <div class="contact-form-wrap">
-          <form name="oferta-landing" method="POST" data-netlify="true">
+          <form 
+            name="oferta-landing" 
+            method="POST" 
+            action="/multumim.html" 
+            data-netlify="true" 
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="oferta-landing">
+            <p style="display:none">
+              <label>Nu completa acest câmp dacă ești om: <input name="bot-field" /></label>
+            </p>
+
             <div class="ev-form-grid">
               <div class="ev-field">
                 <label for="nume">Numele tău</label>
@@ -417,10 +432,12 @@
               <label for="mesaj">Detalii proiect</label>
               <textarea id="mesaj" name="mesaj" class="ev-input" placeholder="Ce consum lunar ai? Te interesează backup?"></textarea>
             </div>
+            
             <div style="font-size:12px; color:#64748b; margin-bottom:16px; display:flex; gap:8px;">
-              <input type="checkbox" required id="gdpr">
+              <input type="checkbox" required id="gdpr" name="gdpr_consent">
               <label for="gdpr" style="font-weight:400; cursor:pointer;">Sunt de acord cu prelucrarea datelor.</label>
             </div>
+            
             <button type="submit" class="ev-submit-btn">Trimite Cererea ➔</button>
           </form>
         </div>
@@ -457,7 +474,7 @@
       lb.style.display = 'flex';
     }
 
-    // 4. GA4 TRACKING SCRIPT
+    // 4. GA4 Tracking (Optional, dar bun sa fie)
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.querySelector('form[name="oferta-landing"]');
       if(form) {
