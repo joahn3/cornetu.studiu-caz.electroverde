@@ -3,666 +3,475 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Studiu de Caz: Sistem Fotovoltaic Business Cornetu | electroVerde</title>
+  <meta name="description" content="Vezi cum Grup Fort Studio și-a asigurat independența energetică: 15.6 kWp, panouri AIKO full-black și backup cu timp de transfer 4ms. Proiect executat de electroVerde." />
+  <link rel="canonical" href="https://electroverde.ro/studiu-caz-cornetu/" />
 
-  <title>Proiect Business: Cornetu, Ilfov – Grup Fort Studio | electroVerde</title>
-  <meta name="description" content="Studiu de caz electroVerde: sistem fotovoltaic business în Cornetu (Ilfov) pentru Grup Fort Studio – 15.6 kWp, panouri AIKO full-black, invertor Deye hibrid 12 kW, capabilitate UPS/backup (transfer ~4 ms) și monitorizare PRO-GUARD." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Proiect Business: Cornetu, Ilfov – Grup Fort Studio" />
+  <meta property="og:description" content="Sistem 15.6 kWp cu backup UPS (4ms) și panouri AIKO Full-Black." />
+  <meta property="og:url" content="https://electroverde.ro/studiu-caz-cornetu/" />
 
   <style>
     /* ===========================
-       electroVerde-ish tokens
+       Tokens & Base
        =========================== */
     :root{
-      --ev-green:#16a34a;
-      --ev-green-2:#22c55e;
-      --ev-ink:#0f172a;
-      --ev-muted:#475569;
-      --ev-muted-2:#64748b;
-      --ev-border:#e2e8f0;
-      --ev-bg:#f5f7f5;
-      --ev-card:#ffffff;
-      --ev-container:1160px;
-      --ev-radius-lg:18px;
-      --ev-radius-md:14px;
-      --ev-shadow:0 18px 55px rgba(15,23,42,.10);
-
-      --cs-hero-bg: url("URL_POZA_DRONA_PANORAMA.jpg");
+      --ev-green: #16a34a;
+      --ev-green-hover: #15803d;
+      --ev-ink: #0f172a;
+      --ev-muted: #475569;
+      --ev-border: #e2e8f0;
+      --ev-bg: #f8fafc;
+      --ev-card: #ffffff;
+      --ev-container: 1160px;
+      --ev-radius: 16px;
+      --ev-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --hero-overlay: linear-gradient(180deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.85) 100%);
     }
 
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    *, *::before, *::after { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
       background: var(--ev-bg);
       color: var(--ev-ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .ev-container{
+    img { max-width: 100%; height: auto; display: block; }
+
+    .ev-container {
       max-width: var(--ev-container);
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 20px;
     }
 
     /* ===========================
-       Minimal header (Netlify)
-       (poți să-l înlocuiești cu header-master complet dacă vrei)
+       Header
        =========================== */
-    .ev-header{
+    .ev-header {
       position: sticky;
-      top:0;
-      z-index: 50;
-      background:#fff;
-      border-bottom: 1px solid #e5e7eb;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--ev-border);
     }
-    .ev-header-inner{
-      max-width: var(--ev-container);
-      margin:0 auto;
-      padding: 10px 16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
+    .ev-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
     }
-    .ev-brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      text-decoration:none;
-      color:inherit;
-      min-width:0;
+    .ev-brand img { height: 40px; width: auto; }
+    
+    .ev-nav { display: flex; gap: 8px; align-items: center; }
+    .ev-nav a {
+      text-decoration: none;
+      color: var(--ev-muted);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.2s;
     }
-    .ev-brand img{
-      height: 38px;
-      width:auto;
-      display:block;
+    .ev-nav a:hover { background: #f0fdf4; color: var(--ev-green-hover); }
+    
+    .ev-cta {
+      background: var(--ev-green);
+      color: white !important;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
     }
-    .ev-nav{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      font-size: 13px;
-      color: #475569;
-    }
-    .ev-nav a{
-      text-decoration:none;
-      color:inherit;
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: background .16s ease, color .16s ease;
-    }
-    .ev-nav a:hover{
-      background:#ecfdf3;
-      color:#166534;
-    }
-    .ev-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration:none;
-      background: linear-gradient(135deg, var(--ev-green), var(--ev-green-2));
-      color:#fff;
-      box-shadow: 0 10px 26px rgba(22,163,74,.33);
-      transition: transform .16s ease, box-shadow .16s ease;
-      white-space:nowrap;
-    }
-    .ev-cta:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 34px rgba(22,163,74,.45);
-    }
-
-    @media (max-width: 860px){
-      .ev-nav{display:none;}
-    }
+    .ev-cta:hover { background: var(--ev-green-hover); transform: translateY(-1px); }
+    
+    .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; padding: 5px; }
 
     /* ===========================
-       Page layout
+       Hero Section
        =========================== */
-    main{padding: 18px 0 34px;}
-
-    .breadcrumbs{
-      font-size: 12px;
-      color: var(--ev-muted-2);
-      margin: 10px 0 10px;
+    .hero {
+      margin-top: 24px;
+      background: var(--hero-overlay), url('URL_POZA_DRONA_PANORAMA.jpg') center/cover no-repeat;
+      border-radius: 24px;
+      padding: 60px 24px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
-    .breadcrumbs a{color:inherit;text-decoration:none;}
-    .breadcrumbs a:hover{color:#166534;text-decoration:underline;}
-
-    .hero{
-      border-radius: 22px;
-      overflow:hidden;
-      border: 1px solid rgba(15,23,42,.10);
-      box-shadow: var(--ev-shadow);
-      background:
-        linear-gradient(180deg, rgba(2,6,23,.60), rgba(2,6,23,.78)),
-        var(--cs-hero-bg);
-      background-size:cover;
-      background-position:center;
-      color:#e5e7eb;
-    }
-    .hero-inner{
-      padding: 26px 18px 22px;
-    }
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 4px 10px;
-      border-radius:999px;
-      border: 1px solid rgba(148,163,184,.45);
-      background: rgba(2,6,23,.55);
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 4px 12px;
+      border-radius: 99px;
       font-size: 11px;
-      letter-spacing: .14em;
       text-transform: uppercase;
-      color:#cbd5f5;
-      margin-bottom: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.2);
     }
-    h1{
-      margin:0 0 6px;
-      font-size: clamp(26px, 3.3vw, 34px);
-      letter-spacing:-0.02em;
-      font-weight: 900;
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      margin: 0 0 16px;
+      line-height: 1.1;
     }
-    .hero p{
-      margin:0 0 10px;
-      color:#d1e1ff;
-      max-width: 820px;
-      line-height: 1.55;
-      font-size: 14px;
+    .hero p {
+      font-size: 16px;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 24px;
     }
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      font-size: 12px;
-      color:#cbd5f5;
+    .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .chip {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 13px;
+      color: #e2e8f0;
     }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,.60);
-      border: 1px solid rgba(148,163,184,.30);
-    }
-    .chip b{color:#bbf7d0;}
+    .chip b { color: #86efac; }
 
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .stat{
-      background: var(--ev-card);
-      border: 1px solid var(--ev-border);
-      border-radius: 16px;
-      padding: 12px 12px 12px;
-      box-shadow: 0 10px 24px rgba(15,23,42,.05);
-    }
-    .stat-label{
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--ev-muted-2);
-      margin-bottom: 4px;
-    }
-    .stat-value{
-      font-size: 18px;
-      font-weight: 900;
-      color: #14532d;
-      margin-bottom: 2px;
-    }
-    .stat-note{
-      font-size: 12px;
-      color: var(--ev-muted);
-      line-height: 1.35;
-    }
-
-    .content{
-      display:grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+    /* ===========================
+       Stats Grid
+       =========================== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
-      margin-top: 16px;
+      margin-top: -30px;
+      position: relative;
+      z-index: 10;
+      padding: 0 10px;
+    }
+    .stat-card {
+      background: var(--ev-card);
+      padding: 20px;
+      border-radius: var(--ev-radius);
+      border: 1px solid var(--ev-border);
+      box-shadow: var(--ev-shadow);
+      text-align: center;
+    }
+    .stat-val { font-size: 24px; font-weight: 800; color: var(--ev-green); display: block; margin-bottom: 4px; }
+    .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ev-muted); }
+
+    /* ===========================
+       Content & Specs
+       =========================== */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin: 40px 0;
       align-items: start;
     }
-
-    .card{
-      background: var(--ev-card);
-      border: 1px solid var(--ev-border);
-      border-radius: var(--ev-radius-lg);
-      padding: 16px;
-    }
-    .card h2{
-      margin: 0 0 8px;
-      font-size: 18px;
-      letter-spacing:-0.01em;
-    }
-    .card p{
-      margin: 0 0 10px;
-      color: var(--ev-muted);
-      line-height: 1.65;
-      font-size: 14px;
-    }
-    .highlight{
+    .main-content h2 { font-size: 22px; margin-bottom: 12px; }
+    .main-content p { color: var(--ev-muted); margin-bottom: 16px; }
+    
+    .highlight-box {
+      background: #f0fdf4;
       border-left: 4px solid var(--ev-green);
-      background: #ecfdf3;
-      padding: 10px 12px;
-      border-radius: 12px;
-      color:#14532d;
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    .specs{
-      background: radial-gradient(circle at 10% 0%, rgba(34,197,94,.20), rgba(2,6,23,1) 60%);
-      color:#e5e7eb;
-      border-radius: var(--ev-radius-lg);
       padding: 16px;
-      box-shadow: 0 22px 70px rgba(15,23,42,.75);
-      border: 1px solid rgba(15,23,42,.9);
+      border-radius: 8px;
+      color: #14532d;
+      margin: 24px 0;
     }
-    .specs h3{margin:0 0 10px;font-size:16px;}
-    .specs ul{list-style:none;padding:0;margin:0;}
-    .specs li{
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      font-size: 13px;
-      color:#cbd5f5;
-    }
-    .specs li:last-child{border-bottom:none;}
-    .specs strong{color:#bbf7d0;}
 
-    .cta{
-      margin-top: 14px;
-      background: #ffffff;
-      border: 1px dashed #cbd5e1;
-      border-radius: 18px;
-      padding: 14px 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      justify-content: space-between;
-      font-size: 13px;
+    .specs-card {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 24px;
+      border-radius: var(--ev-radius);
+      position: sticky;
+      top: 90px;
     }
-    .cta strong{color:#166534;}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 9px 16px;
-      border-radius:999px;
-      border:none;
-      font-size:13px;
-      font-weight:700;
-      cursor:pointer;
-      text-decoration:none;
-      white-space:nowrap;
-      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
-    }
-    .btn-primary{
-      background: linear-gradient(135deg, var(--ev-green), var(--ev-green-2));
-      color:#fff;
-      box-shadow: 0 10px 26px rgba(22,163,74,.33);
-    }
-    .btn-primary:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 34px rgba(22,163,74,.45);
-    }
-    .btn-secondary{
-      background:#f9fafb;
-      border: 1px solid #e5e7eb;
-      color:#111827;
-    }
-    .btn-secondary:hover{background:#eef2ff;}
-
-    /* Gallery */
-    .gallery-wrap{
-      margin-top: 16px;
-      background: var(--ev-card);
-      border: 1px solid var(--ev-border);
-      border-radius: var(--ev-radius-lg);
-      padding: 14px;
-    }
-    .gallery-head{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom: 10px;
-    }
-    .gallery-head h2{margin:0;font-size:18px;}
-    .gallery-head p{margin:0;font-size:12px;color:var(--ev-muted-2);}
-
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 10px;
-    }
-    .thumb{
-      border-radius: 14px;
-      overflow:hidden;
-      border: 1px solid #e5e7eb;
-      background:#f3f4f6;
-      cursor:pointer;
-      position:relative;
-      height: 210px;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transition: transform .35s ease;
-    }
-    .thumb:hover img{transform:scale(1.04);}
-    .thumb::after{
-      content:"🔍";
-      position:absolute;
-      right:10px;
-      bottom:10px;
+    .specs-card h3 { margin-top: 0; color: #86efac; }
+    .specs-list { list-style: none; padding: 0; }
+    .specs-list li {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 0;
       font-size: 14px;
-      background: rgba(2,6,23,.65);
-      color:#e5e7eb;
-      border: 1px solid rgba(148,163,184,.35);
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      opacity:.95;
+      display: flex;
+      justify-content: space-between;
     }
+    .specs-list li:last-child { border-bottom: none; }
+    .specs-list span { color: #94a3b8; }
 
-    /* Lightbox */
-    .modal{
-      position:fixed;
-      inset:0;
-      background: rgba(2,6,23,.78);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding: 18px;
-      z-index: 2000;
+    /* ===========================
+       Gallery
+       =========================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
     }
-    .modal[aria-hidden="false"]{display:flex;}
-    .modal-card{
-      width:min(980px, 100%);
-      background:#0b1220;
-      border:1px solid rgba(148,163,184,.20);
-      border-radius: 18px;
-      overflow:hidden;
-      box-shadow: 0 22px 80px rgba(0,0,0,.45);
+    .thumb {
+      position: relative;
+      border-radius: var(--ev-radius);
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      cursor: zoom-in;
+      box-shadow: var(--ev-shadow);
     }
-    .modal-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      padding: 10px 12px;
-      color:#cbd5f5;
-      font-size: 12px;
-      border-bottom: 1px solid rgba(148,163,184,.15);
-    }
-    .modal-close{
-      appearance:none;
-      border:none;
-      background: rgba(255,255,255,.06);
-      color:#e5e7eb;
-      padding: 6px 10px;
-      border-radius: 999px;
-      cursor:pointer;
-      font-weight:800;
-    }
-    .modal-close:hover{background: rgba(255,255,255,.12);}
-    .modal-img{
-      width:100%;
-      height:min(70vh, 680px);
-      object-fit:contain;
-      background:#020617;
-      display:block;
-    }
-    .modal-cap{
-      padding: 10px 12px 12px;
-      font-size: 13px;
-      color:#9ca3af;
-    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .thumb:hover img { transform: scale(1.05); }
 
-    /* Footer */
-    .ev-footer{
-      margin-top: 28px;
-      padding: 18px 0 22px;
-      border-top: 1px solid #111827;
-      background: #020617;
-      color:#9ca3af;
+    /* ===========================
+       Contact Form Styles
+       =========================== */
+    .contact-section {
+      background: white;
+      border-radius: var(--ev-radius);
+      border: 1px solid var(--ev-border);
+      box-shadow: var(--ev-shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      margin-bottom: 60px;
     }
-    .ev-footer-inner{
-      max-width: var(--ev-container);
-      margin:0 auto;
-      padding: 0 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:space-between;
-      font-size: 12px;
+    .contact-info {
+      background: #1e293b;
+      color: white;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .ev-footer a{color:#9ca3af;text-decoration:none;}
-    .ev-footer a:hover{color:#22c55e;}
+    .contact-info h3 { margin: 0 0 16px; font-size: 22px; }
+    .contact-info p { color: #94a3b8; font-size: 14px; margin-bottom: 24px; line-height: 1.6; }
+    .contact-meta { margin-top: auto; font-size: 13px; color: #cbd5e1; }
+    .contact-meta div { margin-bottom: 8px; }
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .content{grid-template-columns: 1fr;}
-      .stats{grid-template-columns: repeat(2, minmax(0,1fr));}
-      .gallery{grid-template-columns: repeat(2, minmax(0,1fr));}
+    .contact-form-wrap { padding: 40px 30px; }
+    .ev-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
+    .ev-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .ev-field label { font-size: 13px; font-weight: 600; color: var(--ev-muted); }
+    .ev-input {
+      width: 100%; padding: 12px 16px; border-radius: 8px;
+      border: 1px solid var(--ev-border); font-size: 15px; background: #f8fafc;
     }
-    @media (max-width: 640px){
-      .stats{grid-template-columns: 1fr;}
-      .gallery{grid-template-columns: 1fr;}
-      .thumb{height:200px;}
+    .ev-input:focus { outline: none; border-color: var(--ev-green); background: white; box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1); }
+    textarea.ev-input { resize: vertical; min-height: 100px; }
+    .ev-submit-btn {
+      background: var(--ev-green); color: white; border: none; padding: 14px 28px;
+      border-radius: 99px; font-weight: 700; cursor: pointer; font-size: 15px; width: 100%;
+      transition: all 0.2s;
+    }
+    .ev-submit-btn:hover { background: var(--ev-green-hover); transform: translateY(-1px); }
+
+    /* ===========================
+       Responsive
+       =========================== */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      .ev-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: white; flex-direction: column; padding: 20px;
+        border-bottom: 1px solid var(--ev-border); box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+      }
+      .ev-nav.active { display: flex; }
+      .ev-nav a { width: 100%; text-align: center; }
+      .layout-grid { grid-template-columns: 1fr; }
+      .specs-card { position: static; order: 2; }
+      .contact-section { grid-template-columns: 1fr; }
+      .ev-form-grid { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="ev-header">
-    <div class="ev-header-inner">
-      <a class="ev-brand" href="https://electroverde.ro/acasa/" aria-label="electroVerde">
-        <img src="https://electroverde.ro/wp-content/uploads/2025/11/electroverde-logo-full-electroVerde-smallsubtitle.svg" alt="electroVerde" loading="lazy" />
-      </a>
 
-      <nav class="ev-nav" aria-label="Navigare">
+  <header class="ev-header">
+    <div class="ev-container ev-header-inner">
+      <a class="ev-brand" href="https://electroverde.ro/" aria-label="Acasa">
+        <img src="https://electroverde.ro/wp-content/uploads/2025/11/electroverde-logo-full-electroVerde-smallsubtitle.svg" 
+             width="180" height="40" alt="electroVerde Logo">
+      </a>
+      <button class="menu-toggle" aria-label="Meniu" onclick="toggleMenu()">☰</button>
+      <nav class="ev-nav" id="mainNav">
         <a href="https://electroverde.ro/proiecte-portofoliu/">Portofoliu</a>
         <a href="https://electroverde.ro/servicii-de-mentenanta-post-instalare/">Aftercare</a>
-        <a href="https://electroverde.ro/intrebari-frecvente-faq/">FAQ</a>
+        <a href="#contact" class="ev-cta">Cere Ofertă</a>
       </nav>
-
-      <a class="ev-cta" href="https://electroverde.ro/contact/">Cere ofertă</a>
     </div>
   </header>
 
-  <main>
-    <div class="ev-container">
-      <div class="breadcrumbs">
-        <a href="https://electroverde.ro/acasa/">Acasă</a> / <a href="https://electroverde.ro/proiecte-portofoliu/">Portofoliu</a> / Cornetu, Ilfov
+  <main class="ev-container">
+    
+    <section class="hero">
+      <div class="eyebrow">Studiu de Caz • Business</div>
+      <h1>Independență Energetică la <br>Grup Fort Studio</h1>
+      <p>Sistem fotovoltaic 15.6 kWp cu capacitate UPS (~4ms) și estetică full-black, integrat perfect în arhitectura clădirii din Cornetu, Ilfov.</p>
+      
+      <div class="chips">
+        <span class="chip">📍 Cornetu, Ilfov</span>
+        <span class="chip">⚡ 15.6 kWp</span>
+        <span class="chip">🔋 Backup Rapid</span>
       </div>
+    </section>
 
-      <!-- Hero -->
-      <section class="hero" aria-label="Proiect Business: Cornetu, Ilfov">
-        <div class="hero-inner">
-          <div class="eyebrow">Studiu de caz • business</div>
-          <h1>Proiect Business: Cornetu, Ilfov</h1>
-          <p>Siguranță energetică pentru Grup Fort Studio: capabilitate UPS/backup, estetică premium full-black și monitorizare PRO-GUARD.</p>
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-val">15.6 kWp</span>
+        <span class="stat-label">Putere Instalată</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">24x</span>
+        <span class="stat-label">Panouri AIKO</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">12 kW</span>
+        <span class="stat-label">Invertor Deye</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">4 ms</span>
+        <span class="stat-label">Timp transfer pe backup</span>
+      </div>
+    </section>
 
-          <div class="chips">
-            <span class="chip">📍 <b>Locație:</b> Cornetu, Ilfov</span>
-            <span class="chip">⚡ <b>Putere:</b> 15.6 kWp</span>
-            <span class="chip">🧩 <b>Panouri:</b> 24 × AIKO</span>
-            <span class="chip">🛡️ <b>Backup:</b> transfer ~4 ms</span>
+    <div class="layout-grid">
+      
+      <article class="main-content">
+        <h2>Provocarea Clientului</h2>
+        <p><strong>Grup Fort Studio</strong>, o companie de producție video de top, se confrunta cu fluctuații de tensiune și întreruperi scurte de curent care puneau în pericol randările video de lungă durată și echipamentele sensibile.</p>
+        <p>Mai mult, estetica clădirii impunea o soluție vizuală discretă, fără grilele argintii specifice panourilor standard.</p>
+
+        <h2>Soluția electroVerde</h2>
+        <p>Am proiectat o "fortăreață energetică" bazată pe tehnologia <strong>AIKO ABC (All Back Contact)</strong>. Panourile alese sunt "Full Black", oferind un aspect unitar, premium, care completează designul modern al studioului.</p>
+        
+        <div class="highlight-box">
+          <strong>🔒 Securitate UPS:</strong> Sistemul hibrid asigură backup cu timp de transfer ~4 ms pentru continuitatea echipamentelor IT (servere/randare), comutând instantaneu pe baterii în cazul unei avarii în rețea.
+        </div>
+
+        <h3>De ce monitorizare PRO-GUARD?</h3>
+        <p>Pentru clienții business, timpul înseamnă bani. Prin serviciul nostru de mentenanță, monitorizăm parametrii sistemului de la distanță și intervenim proactiv dacă apar anomalii, înainte ca clientul să observe problema.</p>
+      </article>
+
+      <aside class="specs-card">
+        <h3>Fișa Tehnică</h3>
+        <ul class="specs-list">
+          <li><span>Panouri</span> <strong>24 × AIKO 650W</strong></li>
+          <li><span>Tehnologie</span> <strong>ABC Full-Black</strong></li>
+          <li><span>Invertor</span> <strong>Deye 12kW Hibrid</strong></li>
+          <li><span>Structură</span> <strong>Aluminiu + Inox</strong></li>
+          <li><span>Timp transfer</span> <strong>4 ms (Backup)</strong></li>
+          <li><span>Termen</span> <strong>2 Zile Execuție</strong></li>
+        </ul>
+      </aside>
+
+    </div>
+
+    <section>
+      <h2 style="font-size:20px; margin-bottom:16px;">Galerie Foto Proiect</h2>
+      <div class="gallery-grid">
+        <div class="thumb" onclick="openModal('https://via.placeholder.com/1200x800', 'Panouri AIKO Full Black pe acoperiș plan')">
+          <img src="https://via.placeholder.com/400x250" width="400" height="250" alt="Panouri fotovoltaice AIKO" loading="lazy">
+        </div>
+        <div class="thumb" onclick="openModal('https://via.placeholder.com/1200x800', 'Invertor Deye 12kW instalat profesional')">
+          <img src="https://via.placeholder.com/400x250" width="400" height="250" alt="Invertor Deye Instalare" loading="lazy">
+        </div>
+        <div class="thumb" onclick="openModal('https://via.placeholder.com/1200x800', 'Vedere dronă ansamblu Cornetu')">
+          <img src="https://via.placeholder.com/400x250" width="400" height="250" alt="Drona Cornetu" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top: 60px;">
+      <h2 style="text-align:center; font-size:26px; margin-bottom:30px;">Solicită o analiză similară</h2>
+      
+      <div class="contact-section">
+        <div class="contact-info">
+          <h3>Vrei independență energetică?</h3>
+          <p>Fie că ai un business precum Grup Fort Studio sau o locuință, noi proiectăm sistemul exact pe nevoile tale de consum și backup.</p>
+          <div class="contact-meta">
+            <div>📍 Ilfov, București & Împrejurimi</div>
+            <div>⚡ Simulare producție inclusă</div>
+            <div>✅ Ofertă tehnică detaliată</div>
           </div>
         </div>
-      </section>
 
-      <!-- Stats -->
-      <section class="stats" aria-label="Indicatori proiect">
-        <div class="stat">
-          <div class="stat-label">Putere instalată</div>
-          <div class="stat-value">15.6 kWp</div>
-          <div class="stat-note">Dimensionare orientată spre consum relevant + stabilitate.</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Panouri</div>
-          <div class="stat-value">24</div>
-          <div class="stat-note">AIKO 650W, tehnologie ABC, full-black.</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Capabilitate</div>
-          <div class="stat-value">Backup</div>
-          <div class="stat-note">Sistem gândit pentru continuitate, nu doar “economii”.</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Timp transfer pe backup</div>
-          <div class="stat-value">4 ms</div>
-          <div class="stat-note">Comutare rapidă pentru protecția echipamentelor critice.</div>
-        </div>
-      </section>
-
-      <!-- Content -->
-      <section class="content" aria-label="Detalii proiect">
-        <article class="card">
-          <h2>Provocarea clientului</h2>
-          <p><strong>Grup Fort Studio</strong>, companie de producție video, avea nevoie de o soluție care să elimine riscul penelor de curent ce puteau afecta echipamentele de randare și infrastructura IT.</p>
-          <p>În plus, estetica a fost un factor cheie: fiind o clădire modernă, clientul a refuzat panourile clasice cu grile argintii.</p>
-
-          <h2 style="margin-top:14px;">Soluția noastră</h2>
-          <p>Am implementat tehnologia <strong>AIKO ABC (All Back Contact)</strong>. Panourile sunt complet negre (full-black), oferind un aspect unitar, premium.</p>
-          <p>Sistemul este susținut de un invertor <strong>Deye 12 kW Hibrid</strong> și un banc de baterii, transformând clădirea într-o “fortăreață energetică” cu opțiuni reale de backup.</p>
-
-          <div class="highlight">
-            <strong>Mentenanță PRO-GUARD:</strong> sistemul este monitorizat proactiv prin dispecerat (alerte + verificări), pentru a preveni erori înainte să afecteze activitatea studioului.
-          </div>
-
-          <div class="cta">
-            <div>
-              <div><strong>Ai un proiect similar?</strong></div>
-              <div style="font-size:12px;color:var(--ev-muted);margin-top:2px;">
-                Spune-ne puterea, locația și ce vrei să protejezi (servere, producție, continuitate).
+        <div class="contact-form-wrap">
+          <form name="oferta-landing" method="POST" data-netlify="true">
+            <div class="ev-form-grid">
+              <div class="ev-field">
+                <label for="nume">Numele tău</label>
+                <input type="text" id="nume" name="nume" class="ev-input" placeholder="Ex: Andrei Popescu" required>
+              </div>
+              <div class="ev-field">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" class="ev-input" placeholder="07xx..." required>
               </div>
             </div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;">
-              <a class="btn btn-primary" href="https://electroverde.ro/contact/">Cere ofertă</a>
-              <a class="btn btn-secondary" href="https://electroverde.ro/servicii-de-mentenanta-post-instalare/">Vezi PRO-GUARD</a>
+            <div class="ev-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="ev-input" placeholder="nume@companie.ro" required>
             </div>
-          </div>
-        </article>
-
-        <aside class="specs" aria-label="Fișa tehnică">
-          <h3>Fișa tehnică</h3>
-          <ul>
-            <li><strong>Panouri:</strong> 24 × AIKO 650W (Seria ABC Black Hole)</li>
-            <li><strong>Invertor:</strong> Deye 12kW Hibrid Trifazat</li>
-            <li><strong>Structură:</strong> Heavy Duty (aluminiu + inox)</li>
-            <li><strong>Configurație:</strong> Zero Export / UPS Mode</li>
-            <li><strong>Timp transfer pe backup:</strong> 4 ms</li>
-            <li><strong>Locație:</strong> Cornetu, Ilfov</li>
-            <li><strong>Termen execuție:</strong> 2 zile</li>
-          </ul>
-        </aside>
-      </section>
-
-      <!-- Gallery -->
-      <section class="gallery-wrap" aria-label="Galerie foto proiect">
-        <div class="gallery-head">
-          <h2>Galerie foto proiect</h2>
-          <p>Click pe poză pentru zoom.</p>
+            <div class="ev-field">
+              <label for="mesaj">Detalii proiect</label>
+              <textarea id="mesaj" name="mesaj" class="ev-input" placeholder="Ce consum lunar ai? Te interesează backup?"></textarea>
+            </div>
+            <div style="font-size:12px; color:#64748b; margin-bottom:16px; display:flex; gap:8px;">
+              <input type="checkbox" required id="gdpr">
+              <label for="gdpr" style="font-weight:400; cursor:pointer;">Sunt de acord cu prelucrarea datelor.</label>
+            </div>
+            <button type="submit" class="ev-submit-btn">Trimite Cererea ➔</button>
+          </form>
         </div>
-
-        <div class="gallery">
-          <div class="thumb" role="button" tabindex="0"
-               data-full="https://via.placeholder.com/1600x1000/000000/FFFFFF?text=Panouri+AIKO+Black"
-               data-caption="Panouri AIKO full-black (ABC) – aspect unitar, premium."
-               aria-label="Deschide imagine: Panouri AIKO">
-            <img src="https://via.placeholder.com/800x520/000000/FFFFFF?text=Panouri+AIKO+Black" alt="Panouri AIKO" loading="lazy" />
-          </div>
-
-          <div class="thumb" role="button" tabindex="0"
-               data-full="https://via.placeholder.com/1600x1000/333333/FFFFFF?text=Invertor+Deye+Instalat"
-               data-caption="Invertor Deye 12 kW – integrare în configurație hibrid/backup."
-               aria-label="Deschide imagine: Invertor Deye">
-            <img src="https://via.placeholder.com/800x520/333333/FFFFFF?text=Invertor+Deye+Instalat" alt="Invertor Deye" loading="lazy" />
-          </div>
-
-          <div class="thumb" role="button" tabindex="0"
-               data-full="https://via.placeholder.com/1600x1000/4CAF50/FFFFFF?text=Vedere+Drona+Cornetu"
-               data-caption="Vedere de ansamblu – proiect business în Cornetu, Ilfov."
-               aria-label="Deschide imagine: Vedere dronă">
-            <img src="https://via.placeholder.com/800x520/4CAF50/FFFFFF?text=Vedere+Drona+Cornetu" alt="Drona Cornetu" loading="lazy" />
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="modal" id="csModal" aria-hidden="true" role="dialog" aria-label="Vizualizare imagine">
-      <div class="modal-card">
-        <div class="modal-top">
-          <div id="modalTitle">Galerie foto</div>
-          <button class="modal-close" id="modalClose" type="button">Închide ✕</button>
-        </div>
-        <img id="modalImg" class="modal-img" alt="" />
-        <div id="modalCap" class="modal-cap"></div>
       </div>
-    </div>
+    </section>
+
   </main>
 
-  <footer class="ev-footer">
-    <div class="ev-footer-inner">
-      <div>© <span id="year"></span> electroVerde</div>
-      <div>
-        <a href="https://electroverde.ro/contact/">Contact</a> ·
-        <a href="https://electroverde.ro/intrebari-frecvente-faq/">FAQ</a>
-      </div>
+  <footer style="border-top:1px solid #e2e8f0; padding:30px 0; margin-top:40px; text-align:center; color:#64748b; font-size:13px;">
+    <div class="ev-container">
+      © <span id="year"></span> electroVerde. Toate drepturile rezervate.
     </div>
   </footer>
 
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out;" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:90vh; border-radius:8px;">
+    <p id="lightbox-cap" style="position:absolute; bottom:20px; color:white; background:rgba(0,0,0,0.5); padding:5px 10px; border-radius:4px;"></p>
+  </div>
+
   <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // 1. Footer Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Lightbox
-    const modal = document.getElementById("csModal");
-    const modalImg = document.getElementById("modalImg");
-    const modalCap = document.getElementById("modalCap");
-    const modalClose = document.getElementById("modalClose");
-
-    function openModal(src, caption){
-      modal.setAttribute("aria-hidden","false");
-      modalImg.src = src;
-      modalImg.alt = caption || "Imagine proiect";
-      modalCap.textContent = caption || "";
-      document.body.style.overflow = "hidden";
-    }
-    function closeModal(){
-      modal.setAttribute("aria-hidden","true");
-      modalImg.src = "";
-      modalCap.textContent = "";
-      document.body.style.overflow = "";
+    // 2. Mobile Menu
+    function toggleMenu() {
+      document.getElementById('mainNav').classList.toggle('active');
     }
 
-    document.querySelectorAll(".thumb").forEach(el=>{
-      el.addEventListener("click", ()=> openModal(el.dataset.full, el.dataset.caption));
-      el.addEventListener("keydown", (e)=>{
-        if(e.key==="Enter" || e.key===" ") openModal(el.dataset.full, el.dataset.caption);
-      });
+    // 3. Lightbox
+    function openModal(src, cap) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-cap').textContent = cap || '';
+      lb.style.display = 'flex';
+    }
+
+    // 4. GA4 TRACKING SCRIPT
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form[name="oferta-landing"]');
+      if(form) {
+        form.addEventListener('submit', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              'event_category': 'form',
+              'event_label': 'landing_cornetu_contact',
+              'value': 1
+            });
+          }
+        });
+      }
     });
-
-    modalClose.addEventListener("click", closeModal);
-    modal.addEventListener("click", (e)=>{ if(e.target===modal) closeModal(); });
-    document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeModal(); });
   </script>
 </body>
 </html>
